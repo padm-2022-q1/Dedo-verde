@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/myPlantationList">
+    <fragment
+        android:id="@+id/myPlantationList"
+        android:name="com.example.dedoverde.view.MyPlantationList"
+        android:label="fragment_my_plantation_list"
+        tools:layout="@layout/fragment_my_plantation_list" />
+</navigation>
