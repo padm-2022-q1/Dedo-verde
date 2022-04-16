@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">DedoVerde</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plantacao_1">Plantação 1</string>
+    <string name="plantation_date">02/2022</string>
+    <string name="plantation_size">21 Canteiros | 5 m²</string>
+    <string name="add_plantation">Adicionar Plantação</string>
 </resources>
