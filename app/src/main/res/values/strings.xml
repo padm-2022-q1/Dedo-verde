@@ -9,8 +9,8 @@
     <string name="plantation_name">Nome da plantação</string>
     <string name="text_input_edit_text_hint_plantation_name">Nome da plantação</string>
     <string name="text_input_edit_text_hint_plant_type">Tipo de planta</string>
-    <string name="text_input_edit_text_hint_plantation_width">Largura do terreno em (m\u00B2)</string>
-    <string name="text_input_edit_text_hint_plantation_height">Altura do terreno em (m\u00B2)</string>
+    <string name="text_input_edit_text_hint_plantation_width">Largura do terreno (em metros)</string>
+    <string name="text_input_edit_text_hint_plantation_height">Altura do terreno (em metros)</string>
     <string name="text_input_edit_text_hint_plantation_location">Localização</string>
 
     <string name="new_plot_results_max_plant_amount_title">Número máximo de canteiros</string>
