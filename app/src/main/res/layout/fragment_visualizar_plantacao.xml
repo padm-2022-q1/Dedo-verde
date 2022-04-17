@@ -158,6 +158,7 @@
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
         android:text="@string/localizacao"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tempo_estimado_colheita_value" />

@@ -37,8 +37,8 @@
     <string name="medida_cm_padrao">00 cm</string>
     <string name="numero_padrao_1">0</string>
     <string name="tempo_semanas">00 semanas</string>
-    <string name="localizacao">LOCALIZAÇÃO</string>
-    <string name="endereco_padrao">Rua, nº, Cidade - UF</string>
+    <string name="localizacao">Localização</string>
+    <string name="endereco_padrao">Rua, nº, Bairro, Cidade - UF</string>
     <string name="data_padrao">00/00/0000</string>
     <string name="remover">REMOVER</string>
 
