@@ -47,4 +47,13 @@
     <string name="data_de_criacao">DATA DE CRIAÇÃO</string>
     <string name="data_padrao">00/00/0000</string>
     <string name="remover">REMOVER</string>
+
+    <string-array name="spinner_plant_type">
+        <item>Tipo de planta</item>
+        <item>Alface</item>
+        <item>Alfafa</item>
+        <item>Couve</item>
+        <item>Espinafre</item>
+        <item>Rúcula</item>
+    </string-array>
 </resources>
