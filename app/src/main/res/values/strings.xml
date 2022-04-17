@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Dedo Verde</string>
+    <string name="plantacao_1">Plantação 1</string>
+    <string name="plantation_date">02/2022</string>
+    <string name="plantation_size">21 Canteiros | 5 m²</string>
+    <string name="add_plantation">Adicionar Plantação</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plantation_name">Nome da plantação</string>
+    <string name="text_input_edit_text_hint_plantation_name">Nome da plantação</string>
+    <string name="text_input_edit_text_hint_plant_type">Tipo de planta</string>
+    <string name="text_input_edit_text_hint_plantation_width">Largura do terreno em (m\u00B2)</string>
+    <string name="text_input_edit_text_hint_plantation_height">Altura do terreno em (m\u00B2)</string>
+    <string name="text_input_edit_text_hint_plantation_location">Localização</string>
+
+    <string name="new_plot_results_max_plant_amount_title">Número máximo de canteiros</string>
+    <string name="new_plot_results_max_plant_amount">Número máximo de canteiros</string>
+    <string name="new_plot_results_min_plant_distance_title">Espaço mínimo entre os canteiros</string>
+    <string name="new_plot_results_min_plant_distance">%1$.2f cm</string>
+    <string name="new_plot_results_max_rows_title">Número máximo de linhas</string>
+    <string name="new_plot_results_max_cols_title">Número máximo de colunas</string>
+    <string name="new_plot_results_max_cols">Número máximo de colunas</string>
+    <string name="new_plot_results_estimated_harvest_time_title">Tempo estimado até a colheita</string>
+    <string name="new_plot_results_estimated_harvest_time">%1$d dias</string>
+    <string name="new_plot_results_creation_date_title">Data de criação</string>
+    <string name="new_plot_results_creation_date">Data de criação</string>
+    <string name="new_plot_results_max_rows">Número máximo de linhas</string>
+    <string name="new_plot_results_button_remove">Remover</string>
+    <string name="new_plot_results_fab_finish">Concluir</string>
+    <string name="new_plot_results_title">Título</string>
+    <string name="new_plot_results_edit_button_item_title">Editar</string>
+    <string name="new_plot_results_address_title">Endereço</string>
+    <string name="new_plot_results_address">Endereço</string>
+    
+    <string name="visualizar_plantacao_titulo_padrao">Plantação</string>
+    <string name="numero_maximo_de_canteiros">NÚMERO MÁXIMO DE CANTEIROS</string>
+    <string name="numero_padrao_2">00</string>
+    <string name="espaco_minimo_entre_os_canteiros">ESPAÇO MÍNIMO ENTRE OS CANTEIROS</string>
+    <string name="medida_cm_padrao">00cm</string>
+    <string name="numero_padrao_1">0</string>
+    <string name="numero_maximo_de_linhas">NÚMERO MÁXIMO DE LINHAS</string>
+    <string name="numero_maximo_de_colunas">NÚMERO MÁXIMO DE COLUNAS</string>
+    <string name="tempo_estimado_ate_a_colheita">TEMPO ESTIMADO ATÉ A COLHEITA</string>
+    <string name="tempo_semanas">00 semanas</string>
+    <string name="localizacao">LOCALIZAÇÃO</string>
+    <string name="endereco_padrao">Rua, nº, Cidade - UF</string>
+    <string name="data_de_criacao">DATA DE CRIAÇÃO</string>
+    <string name="data_padrao">00/00/0000</string>
+    <string name="remover">REMOVER</string>
+
+    <string-array name="spinner_plant_type">
+        <item>Tipo de planta</item>
+        <item>Alface</item>
+        <item>Alfafa</item>
+        <item>Couve</item>
+        <item>Espinafre</item>
+        <item>Rúcula</item>
+    </string-array>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/myPlantationList">
+    <fragment
+        android:id="@+id/myPlantationList"
+        android:name="com.example.dedoverde.view.MyPlantationList"
+        android:label="fragment_my_plantation_list"
+        tools:layout="@layout/fragment_my_plantation_list" >
+        <action
+            android:id="@+id/action_myPlantationList_to_newPlantation"
+            app:destination="@id/newPlantation"
+            app:popUpTo="@id/myPlantationList" />
+        <action
+            android:id="@+id/action_myPlantationList_to_plantationView"
+            app:destination="@id/plantationView"
+            app:popUpTo="@id/myPlantationList" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPlantation"
+        android:name="com.example.dedoverde.view.NewPlantation"
+        android:label="NewPlantation" >
+        <action
+            android:id="@+id/action_newPlantation_to_plotResults"
+            app:destination="@id/newPlotResults"
+            app:popUpTo="@id/newPlantation" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPlotResults"
+        android:name="com.example.dedoverde.view.NewPlotResults"
+        android:label="new_plot_results"
+        tools:layout="@layout/new_plot_results" >
+        <action
+            android:id="@+id/action_newPlotResults_to_myPlantationList"
+            app:destination="@id/myPlantationList" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantationView"
+        android:name="com.example.dedoverde.view.PlantationView"
+        android:label="PlantationView" >
+        <action
+            android:id="@+id/action_plantationView_to_myPlantationList"
+            app:destination="@id/myPlantationList" />
+    </fragment>
+</navigation>

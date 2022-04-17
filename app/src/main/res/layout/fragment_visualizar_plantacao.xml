@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/forest_green"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_voltar_foreground"
+        app:navigationIconTint="@color/white"
+        app:title="@string/visualizar_plantacao_titulo_padrao"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numero_maximo_canteiros_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_extremos_tela"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/numero_maximo_de_canteiros"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
+
+    <TextView
+        android:id="@+id/numero_maximo_canteiros_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_padrao_2"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_canteiros_label" />
+
+    <TextView
+        android:id="@+id/espaco_minimo_canteiros_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/espaco_minimo_entre_os_canteiros"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_canteiros_value" />
+
+    <TextView
+        android:id="@+id/espaco_minimo_canteiros_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/medida_cm_padrao"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/espaco_minimo_canteiros_label" />
+
+    <TextView
+        android:id="@+id/numero_maximo_linhas_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/numero_maximo_de_linhas"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/espaco_minimo_canteiros_value" />
+
+    <TextView
+        android:id="@+id/numero_maximo_linhas_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        android:text="@string/numero_padrao_1"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_linhas_label" />
+
+    <TextView
+        android:id="@+id/numero_maximo_colunas_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/numero_maximo_de_colunas"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_linhas_value" />
+
+    <TextView
+        android:id="@+id/numero_maximo_colunas_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        android:text="@string/numero_padrao_1"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_colunas_label" />
+
+    <TextView
+        android:id="@+id/tempo_estimado_colheita_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/tempo_estimado_ate_a_colheita"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_maximo_colunas_value" />
+
+    <TextView
+        android:id="@+id/tempo_estimado_colheita_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        android:text="@string/tempo_semanas"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tempo_estimado_colheita_label" />
+
+    <TextView
+        android:id="@+id/localizacao_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/localizacao"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tempo_estimado_colheita_value" />
+
+    <TextView
+        android:id="@+id/localizacao_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        android:text="@string/endereco_padrao"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/localizacao_label" />
+
+    <TextView
+        android:id="@+id/data_criacao_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/espaco_acima_label"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:text="@string/data_de_criacao"
+        android:textSize="@dimen/tamanho_fonte_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/localizacao_value" />
+
+    <TextView
+        android:id="@+id/data_criacao_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+        android:paddingBottom="@dimen/espaco_abaixo_padrao"
+        android:text="@string/data_padrao"
+        android:textSize="@dimen/tamanho_fonte_padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data_criacao_label" />
+
+    <Button
+        android:id="@+id/delete_plantation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remover"
+        android:backgroundTint="@color/design_default_color_background"
+        android:textColor="@color/red"
+        android:layout_marginBottom="@dimen/espaco_extremos_tela"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.NewPlotResults"
+    android:padding="@dimen/new_plot_results_padding">
+
+    <TextView
+        android:id="@+id/new_plot_results_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_plant_amount_title"
+
+        android:textSize="@dimen/new_plot_results_main_title_font_size"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:autofillHints="postalAddress"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_plant_amount_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_max_plant_amount_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_plant_amount"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_plant_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_max_plant_amount"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_plant_amount_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_min_plant_distance_title"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_min_plant_distance_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_min_plant_distance_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_plant_amount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_min_plant_distance"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_min_plant_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_min_plant_distance"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_min_plant_distance_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_rows_title"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_rows_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_max_rows_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_min_plant_distance"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_rows"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_rows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_max_rows"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_rows_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_cols_title"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_cols_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/new_plot_results_max_cols_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_rows"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_cols"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_max_cols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_max_cols"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_cols_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_estimated_harvest_time_title"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_address_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/new_plot_results_address_title"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_creation_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_address"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size" />
+
+    <TextView
+        android:id="@+id/new_plot_results_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_address"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_address_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/new_plot_results_estimated_harvest_time_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_estimated_harvest_time_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_max_cols"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_estimated_harvest_time"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_estimated_harvest_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/new_plot_results_estimated_harvest_time"
+        app:layout_constraintTop_toBottomOf="@+id/new_plot_results_estimated_harvest_time_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_creation_date_title"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_creation_date_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/new_plot_results_creation_date_title"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_estimated_harvest_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/new_plot_results_creation_date"
+        android:textAllCaps="true"
+        android:textSize="@dimen/new_plot_results_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/new_plot_results_creation_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_plot_results_creation_date"
+        app:layout_constraintTop_toBottomOf="@id/new_plot_results_creation_date_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingBottom="@dimen/new_plot_results_padding"
+        android:textSize="@dimen/new_plot_results_value_text_size"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_plot_results_fab_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryColor"
+        android:backgroundTintMode="add"
+        android:contentDescription="@string/new_plot_results_address"
+        android:src="@drawable/ic_baseline_finish_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/secondaryDarkColor"
+        android:layout_margin="@dimen/new_plot_results_padding"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
