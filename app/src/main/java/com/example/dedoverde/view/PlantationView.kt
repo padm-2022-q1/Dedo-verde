@@ -1,4 +1,4 @@
-package br.edu.ufabc.dedoverde.view
+package com.example.dedoverde.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
