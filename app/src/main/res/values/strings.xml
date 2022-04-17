@@ -1,7 +1,26 @@
 <resources>
-    <string name="app_name">DedoVerde</string>
+    <string name="app_name">Dedo Verde</string>
     <string name="plantacao_1">Plantação 1</string>
     <string name="plantation_date">02/2022</string>
     <string name="plantation_size">21 Canteiros | 5 m²</string>
     <string name="add_plantation">Adicionar Plantação</string>
+
+    <string name="new_plot_results_max_plant_amount_title">Número máximo de canteiros</string>
+    <string name="new_plot_results_max_plant_amount">Número máximo de canteiros</string>
+    <string name="new_plot_results_min_plant_distance_title">Espaço mínimo entre os canteiros</string>
+    <string name="new_plot_results_min_plant_distance">%1$.2f cm</string>
+    <string name="new_plot_results_max_rows_title">Número máximo de linhas</string>
+    <string name="new_plot_results_max_cols_title">Número máximo de colunas</string>
+    <string name="new_plot_results_max_cols">Número máximo de colunas</string>
+    <string name="new_plot_results_estimated_harvest_time_title">Tempo estimado até a colheita</string>
+    <string name="new_plot_results_estimated_harvest_time">%1$d dias</string>
+    <string name="new_plot_results_creation_date_title">Data de criação</string>
+    <string name="new_plot_results_creation_date">Data de criação</string>
+    <string name="new_plot_results_max_rows">Número máximo de linhas</string>
+    <string name="new_plot_results_button_remove">Remover</string>
+    <string name="new_plot_results_fab_finish">Concluir</string>
+    <string name="new_plot_results_title">Título</string>
+    <string name="new_plot_results_edit_button_item_title">Editar</string>
+    <string name="new_plot_results_address_title">Endereço</string>
+    <string name="new_plot_results_address">Endereço</string>
 </resources>

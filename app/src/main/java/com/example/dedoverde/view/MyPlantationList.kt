@@ -6,11 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import com.example.dedoverde.R
 import com.example.dedoverde.databinding.FragmentMyPlantationListBinding
 import com.example.dedoverde.model.Plantation
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 class MyPlantationList : Fragment() {

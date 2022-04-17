@@ -9,4 +9,9 @@
         android:name="com.example.dedoverde.view.MyPlantationList"
         android:label="fragment_my_plantation_list"
         tools:layout="@layout/fragment_my_plantation_list" />
+    <fragment
+        android:id="@+id/new_plot_results"
+        android:name="com.example.dedoverde.view.NewPlotResults"
+        android:label="fragment_new_plot_results"
+        tools:layout="@layout/new_plot_results" />
 </navigation>
