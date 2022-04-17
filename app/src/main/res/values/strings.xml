@@ -47,8 +47,4 @@
     <string name="data_de_criacao">DATA DE CRIAÇÃO</string>
     <string name="data_padrao">00/00/0000</string>
     <string name="remover">REMOVER</string>
-    <string name="plantacao_1">Plantação 1</string>
-    <string name="plantation_date">02/2022</string>
-    <string name="plantation_size">21 Canteiros | 5 m²</string>
-    <string name="add_plantation">Adicionar Plantação</string>
 </resources>

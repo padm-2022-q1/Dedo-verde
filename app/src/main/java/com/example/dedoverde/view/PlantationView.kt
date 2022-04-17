@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.edu.ufabc.dedoverde.databinding.FragmentVisualizarPlantacaoBinding
+import com.example.dedoverde.databinding.FragmentVisualizarPlantacaoBinding
 
 class PlantationView : Fragment() {
     private lateinit var binding: FragmentVisualizarPlantacaoBinding
