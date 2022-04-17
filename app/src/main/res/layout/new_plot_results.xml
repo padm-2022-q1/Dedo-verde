@@ -17,7 +17,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_plant_amount_title"
-
         android:textSize="@dimen/new_plot_results_main_title_font_size"
         android:paddingBottom="@dimen/new_plot_results_padding"
         android:autofillHints="postalAddress"
@@ -33,6 +32,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_plant_amount"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />
@@ -60,6 +60,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_min_plant_distance"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />
@@ -87,6 +88,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_rows"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />
@@ -114,6 +116,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_max_cols"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />
@@ -141,6 +144,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_address"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size" />
 
@@ -166,6 +170,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_estimated_harvest_time"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />
@@ -193,6 +198,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/new_plot_results_creation_date"
+        android:paddingTop="@dimen/new_plot_results_padding"
         android:textAllCaps="true"
         android:textSize="@dimen/new_plot_results_title_text_size"
         />

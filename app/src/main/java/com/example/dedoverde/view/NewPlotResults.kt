@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.dedoverde.R
 import com.example.dedoverde.databinding.NewPlotResultsBinding
 import com.example.dedoverde.model.PlotOptimizationResults
+import java.util.*
 
 
 class NewPlotResults : Fragment() {
@@ -49,10 +49,10 @@ class NewPlotResults : Fragment() {
 
         binding.newPlotResultsTitle.text = results.title
         binding.newPlotResultsMaxPlantAmount.text = results.maxPlantAmount.toString()
-        binding.newPlotResultsMinPlantDistance.text = getString(R.string.new_plot_results_min_plant_distance, results.minPlantDistance * 10)
+        binding.newPlotResultsMinPlantDistance.text = String.format(Locale.ENGLISH, "%.2f m", mock.minPlantDistance)
         binding.newPlotResultsMaxRows.text = results.maxRows.toString()
         binding.newPlotResultsMaxCols.text = results.maxCols.toString()
-        binding.newPlotResultsEstimatedHarvestTime.text = getString(R.string.new_plot_results_estimated_harvest_time, results.estimatedHarvestTime)
+        binding.newPlotResultsEstimatedHarvestTime.text = String.format(Locale.ENGLISH, "%d dias", mock.estimatedHarvestTime)
         binding.newPlotResultsAddress.text = results.address
     }
 

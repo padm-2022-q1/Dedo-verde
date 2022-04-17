@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -38,7 +37,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_extremos_tela"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/numero_maximo_de_canteiros"
+        android:text="@string/new_plot_results_max_plant_amount_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
@@ -61,7 +61,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/espaco_minimo_entre_os_canteiros"
+        android:text="@string/new_plot_results_min_plant_distance_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numero_maximo_canteiros_value" />
@@ -84,7 +85,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/numero_maximo_de_linhas"
+        android:text="@string/new_plot_results_max_rows_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/espaco_minimo_canteiros_value" />
@@ -107,7 +109,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/numero_maximo_de_colunas"
+        android:text="@string/new_plot_results_max_cols_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numero_maximo_linhas_value" />
@@ -130,7 +133,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/tempo_estimado_ate_a_colheita"
+        android:text="@string/new_plot_results_estimated_harvest_time_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/numero_maximo_colunas_value" />
@@ -176,7 +180,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/espaco_acima_label"
         android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/data_de_criacao"
+        android:text="@string/new_plot_results_creation_date_title"
+        android:textAllCaps="true"
         android:textSize="@dimen/tamanho_fonte_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/localizacao_value" />
@@ -198,7 +203,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/remover"
-        android:backgroundTint="@color/design_default_color_background"
+        android:backgroundTint="@color/design_default_color_on_primary"
         android:textColor="@color/red"
         android:layout_marginBottom="@dimen/espaco_extremos_tela"
         app:layout_constraintBottom_toBottomOf="parent"

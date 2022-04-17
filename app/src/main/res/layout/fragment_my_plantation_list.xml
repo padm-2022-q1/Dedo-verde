@@ -4,15 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.MyPlantationList">
+    tools:context=".view.MyPlantationList" >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar_principal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/forest_green"
+        android:nestedScrollingEnabled="false"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        android:layout_gravity="top"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_note_list"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginVertical="56dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_plantation"

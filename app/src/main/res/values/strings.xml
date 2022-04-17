@@ -33,18 +33,12 @@
     <string name="new_plot_results_address">Endereço</string>
     
     <string name="visualizar_plantacao_titulo_padrao">Plantação</string>
-    <string name="numero_maximo_de_canteiros">NÚMERO MÁXIMO DE CANTEIROS</string>
     <string name="numero_padrao_2">00</string>
-    <string name="espaco_minimo_entre_os_canteiros">ESPAÇO MÍNIMO ENTRE OS CANTEIROS</string>
-    <string name="medida_cm_padrao">00cm</string>
+    <string name="medida_cm_padrao">00 cm</string>
     <string name="numero_padrao_1">0</string>
-    <string name="numero_maximo_de_linhas">NÚMERO MÁXIMO DE LINHAS</string>
-    <string name="numero_maximo_de_colunas">NÚMERO MÁXIMO DE COLUNAS</string>
-    <string name="tempo_estimado_ate_a_colheita">TEMPO ESTIMADO ATÉ A COLHEITA</string>
     <string name="tempo_semanas">00 semanas</string>
     <string name="localizacao">LOCALIZAÇÃO</string>
     <string name="endereco_padrao">Rua, nº, Cidade - UF</string>
-    <string name="data_de_criacao">DATA DE CRIAÇÃO</string>
     <string name="data_padrao">00/00/0000</string>
     <string name="remover">REMOVER</string>
 
