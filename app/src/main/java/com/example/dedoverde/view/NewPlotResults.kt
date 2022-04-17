@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.dedoverde.R
 import com.example.dedoverde.databinding.NewPlotResultsBinding
 import com.example.dedoverde.model.PlotOptimizationResults
@@ -31,6 +32,16 @@ class NewPlotResults : Fragment() {
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        binding.newPlotResultsFabFinish.setOnClickListener {
+            getNavController()?.navigate(
+                NewPlotResultsDirections.actionNewPlotResultsToMyPlantationList()
+            )
+        }
+    }
+
     fun onViewCreated(view: View, savedInstanceState: Bundle?, plotOptimizationResults: PlotOptimizationResults?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -44,4 +55,6 @@ class NewPlotResults : Fragment() {
         binding.newPlotResultsEstimatedHarvestTime.text = getString(R.string.new_plot_results_estimated_harvest_time, results.estimatedHarvestTime)
         binding.newPlotResultsAddress.text = results.address
     }
+
+    private fun getNavController() = view?.findNavController()
 }

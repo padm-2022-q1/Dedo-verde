@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.dedoverde.databinding.FragmentVisualizarPlantacaoBinding
 import com.example.dedoverde.model.PlotOptimizationResults
 import java.util.Locale
@@ -41,5 +42,13 @@ class PlantationView : Fragment() {
         binding.numeroMaximoLinhasValue.text = mock.maxRows.toString()
         binding.tempoEstimadoColheitaValue.text = String.format(Locale.ENGLISH, "%d dias", mock.estimatedHarvestTime)
         binding.localizacaoValue.text = mock.address
+
+        binding.deletePlantation.setOnClickListener {
+            getNavController()?.navigate(
+                PlantationViewDirections.actionPlantationViewToMyPlantationList()
+            )
+        }
     }
+
+    private fun getNavController() = view?.findNavController()
 }

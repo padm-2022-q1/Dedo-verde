@@ -9,30 +9,18 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout_plantation_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_edit"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="0dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_input_edit_text_plantation_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/text_input_edit_text_hint_plantation_name">
-        </com.google.android.material.textfield.TextInputEditText>
+            android:hint="@string/text_input_edit_text_hint_plantation_name"></com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/button_edit"
-        app:layout_constraintStart_toEndOf="@+id/text_input_layout_plantation_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/component_spacing"
-        android:drawableEnd="@drawable/ic_baseline_edit_24"
-        android:background="@android:color/transparent"
-        />
 
     <!--
     <Spinner
@@ -127,15 +115,17 @@
         android:drawableEnd="@drawable/ic_baseline_location_on_24"
         />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button_add"
-        app:layout_constraintStart_toStartOf="@id/button_location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:scaleType="fitXY"
-        android:background="@android:color/transparent"
-        android:drawableEnd="@drawable/ic_baseline_done_24" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/add_plantation"
+        android:src="@drawable/ic_baseline_done_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

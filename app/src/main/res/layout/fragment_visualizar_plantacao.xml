@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -19,6 +20,17 @@
         app:title="@string/visualizar_plantacao_titulo_padrao"
         app:titleCentered="true"
         app:titleTextColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_baseline_edit_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/numero_maximo_canteiros_label"
@@ -182,6 +194,7 @@
         app:layout_constraintTop_toBottomOf="@id/data_criacao_label" />
 
     <Button
+        android:id="@+id/delete_plantation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/remover"

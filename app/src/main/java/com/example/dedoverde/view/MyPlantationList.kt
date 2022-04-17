@@ -61,17 +61,17 @@ class MyPlantationList : Fragment() {
         binding.recyclerViewNoteList.apply {
             adapter = MyPlantationAdapter(
                 mockPlantationList,
-                MyPlantationAdapter.OnClickListener { plantation -> null
-//                    getNavController()?.navigate(
-//                        NoteListFragmentDirections.actionDestinationNoteListToNoteDetailsFragment(
-//                            note.title,
-//                            note.content,
-//                            note.formattedDateCreated(),
-//                            note.formattedDateUpdated(),
-//                            note.favorite
-//                        )
-//                    )
+                MyPlantationAdapter.OnClickListener { plantation ->
+                    getNavController()?.navigate(
+                        MyPlantationListDirections.actionMyPlantationListToPlantationView()
+                    )
                 }
+            )
+        }
+
+        binding.addPlantation.setOnClickListener {
+            getNavController()?.navigate(
+                MyPlantationListDirections.actionMyPlantationListToNewPlantation()
             )
         }
     }
