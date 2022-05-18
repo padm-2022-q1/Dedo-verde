@@ -46,6 +46,8 @@ class PlantationViewModel(application: Application) : AndroidViewModel(applicati
         data class PlantationListResult(val value: List<Plantation>) : Result()
 
         data class PlantResult(val value: Plant) : Result()
+
+        data class PlantListResult(val value: List<Plant>) : Result()
     }
 
     /**
@@ -61,6 +63,26 @@ class PlantationViewModel(application: Application) : AndroidViewModel(applicati
                 Status.Failure(
                     java.lang.Exception(
                         "Failed to retrieve plantation list from repository",
+                        e
+                    )
+                )
+            )
+        }
+    }
+
+    /**
+     * Get all plant.
+     * @return a live data of status
+     */
+    fun getAllPlant() = liveData {
+        try {
+            emit(Status.Loading)
+            emit(Status.Success(Result.PlantListResult(repository.getAllPlants())))
+        } catch (e: java.lang.Exception) {
+            emit(
+                Status.Failure(
+                    java.lang.Exception(
+                        "Failed to retrieve plant list from repository",
                         e
                     )
                 )

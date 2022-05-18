@@ -1,18 +1,20 @@
 package com.example.dedoverde.model
 
+import android.util.Log
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 import java.util.*
 
 /**
- * Repository for videos collections in Firestore.
+ * Repository for plantation collections in Firestore.
  */
 class Repository {
     private val db = Firebase.firestore
 
     companion object {
         private const val plantationCollection = "plantations"
+        private const val plantCollection = "Plant"
 
         private object PlantationDoc {
             const val id = "id"
@@ -26,10 +28,11 @@ class Repository {
     }
 
     private fun getCollection() = db.collection(plantationCollection)
+    private fun getPlantCollection() = db.collection(plantCollection)
 
     /**
      * Get a list of plantations.
-     * @return the list of videos
+     * @return the list of plants
      */
     suspend fun getAll(): List<Plantation> {
         if (isCollectionEmpty()) {
@@ -41,6 +44,22 @@ class Repository {
             .await()
             .toObjects(PlantationDTO::class.java)
             .map { it.toPlantation() }
+    }
+
+    /**
+     * Get a list of plants.
+     * @return the list of plants
+     */
+    suspend fun getAllPlants(): List<Plant> {
+        if (isCollectionPlantEmpty()) {
+            populatePlants()
+        }
+
+        return getPlantCollection()
+            .get()
+            .await()
+            .toObjects(PlantDTO::class.java)
+            .map { it.toPlant() }
     }
 
     /**
@@ -73,8 +92,9 @@ class Repository {
      * @return void
      */
     suspend fun insertPlantation(plantation: PlantationDTO) {
+        val id = getCollection().get().await().size().toLong() + 1
         val p = PlantationDTO(
-            getCollection().get().await().size().toLong() + 1,
+            id,
             plantation.title,
             plantation.width,
             plantation.height,
@@ -84,7 +104,7 @@ class Repository {
         )
 
         getCollection()
-            .document()
+            .document(id.toString())
             .set(p)
     }
 
@@ -104,7 +124,16 @@ class Repository {
         .await()
         .size() == 0
 
+    private suspend fun isCollectionPlantEmpty() = getPlantCollection()
+        .get()
+        .await()
+        .size() == 0
+
     private suspend fun populate() = Dataset.plantations.forEach { plantationDTO ->
         getCollection().document("${plantationDTO.id}").set(plantationDTO).await()
+    }
+
+    private suspend fun populatePlants() = Dataset.plants.forEach { plantDTO ->
+        getPlantCollection().document("${plantDTO.id}").set(plantDTO).await()
     }
 }

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Eugene/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Eugene/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Eugene/Desktop/ufabc/padm/Dedo-verde/app/src/main/res/layout/fragment_new_plantation.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Eugene/Desktop/ufabc/padm/Dedo-verde/app/src/main/res/layout/my_plantation_list_item.xml" value="0.36666666666666664" />
         <entry key="src/dedo-verde/app/src/main/res/layout/activity_main.xml" value="0.359375" />
         <entry key="src/dedo-verde/app/src/main/res/layout/visualizar_plantacao.xml" value="0.359375" />

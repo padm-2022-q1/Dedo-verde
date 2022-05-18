@@ -1,20 +1,26 @@
 package com.example.dedoverde.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Button
-import com.example.dedoverde.R
-import com.google.android.material.textfield.TextInputEditText
-import android.widget.Spinner
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.dedoverde.databinding.FragmentNewPlantationBinding
+import com.example.dedoverde.model.PlantationDTO
+import com.example.dedoverde.viewmodel.PlantationViewModel
+import com.google.android.material.snackbar.Snackbar
+import java.util.*
+
 
 class NewPlantation : Fragment() {
     private lateinit var binding: FragmentNewPlantationBinding
+    private val viewModel: PlantationViewModel by viewModels()
+    private var plantId: Long = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,23 +39,76 @@ class NewPlantation : Fragment() {
         super.onStart()
 
         binding.buttonAdd.setOnClickListener {
-
-
-
-            getNavController()?.navigate(
-                NewPlantationDirections.actionNewPlantationToPlotResults()
+            val plantation = PlantationDTO (
+                0,
+                binding.textInputEditTextPlantationName.text.toString(),
+                binding.textInputEditTextPlantationWidth.text.toString().toFloat(),
+                binding.textInputEditTextPlantationHeight.text.toString().toFloat(),
+                binding.textInputEditTextPlantationLocation.toString(),
+                plantId,
+                Calendar.getInstance().time
             )
+
+            viewModel.insert(plantation).observe(viewLifecycleOwner) { status ->
+                when (status) {
+                    is PlantationViewModel.Status.Failure -> {
+                        Log.e("VIEW", "Failed to insert plantation", status.e)
+                        Snackbar.make(
+                            binding.root, "Failed to insert plantation",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                    is PlantationViewModel.Status.Success -> {
+                        getNavController()?.navigate(
+                            NewPlantationDirections.actionNewPlantationToPlotResults()
+                        )
+                    }
+                }
+            }
         }
 
-        // TODO: get values from navigation,database,json, etc
-        binding.textInputEditTextPlantationName.setText("Plantação 1")
+        viewModel.getAllPlant().observe(viewLifecycleOwner) { status ->
+            when (status) {
+                is PlantationViewModel.Status.Failure -> {
+                    Log.e("VIEW", "Failed to fetch metadata list", status.e)
+                    Snackbar.make(
+                        binding.root, "Failed to list items",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
+                is PlantationViewModel.Status.Success -> {
+                    val listOfItems = (status.result as PlantationViewModel.Result.PlantListResult).value.map {
+                        it.name
+                    }
+                    val listOfIds = (status.result as PlantationViewModel.Result.PlantListResult).value.map {
+                        it.id
+                    }
 
-        val listOfItems = resources.getStringArray(R.array.spinner_plant_type)
-        val arrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, listOfItems)
-        // Set layout to use when the list of choices appear
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        // Set Adapter to Spinner
-        binding.spinnerPlantType.setAdapter(arrayAdapter)
+                    val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
+                        requireContext(),
+                        android.R.layout.simple_spinner_item,
+                        listOfItems
+                    )
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    binding.spinnerPlantType.adapter = adapter
+
+                    binding.spinnerPlantType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                        override fun onItemSelected(
+                            parentView: AdapterView<*>?,
+                            selectedItemView: View?,
+                            position: Int,
+                            id: Long
+                        ) {
+                            plantId = listOfIds[position]
+                        }
+
+                        override fun onNothingSelected(parentView: AdapterView<*>?) {
+
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun getNavController() = view?.findNavController()

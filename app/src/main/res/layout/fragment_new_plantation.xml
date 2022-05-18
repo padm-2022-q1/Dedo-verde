@@ -19,7 +19,9 @@
             android:id="@+id/text_input_edit_text_plantation_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/text_input_edit_text_hint_plantation_name"></com.google.android.material.textfield.TextInputEditText>
+            android:hint="@string/text_input_edit_text_hint_plantation_name">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
@@ -82,7 +84,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/text_input_edit_text_hint_plantation_height"
-            android:textColorHint="#616161"></com.google.android.material.textfield.TextInputEditText>
+            android:textColorHint="#616161">
+
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
