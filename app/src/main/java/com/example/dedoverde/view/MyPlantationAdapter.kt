@@ -4,9 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dedoverde.databinding.MyPlantationListItemBinding
-import com.example.dedoverde.model.Plant
 import com.example.dedoverde.model.Plantation
-import java.util.*
 
 class MyPlantationAdapter(private val plantations: List<Plantation>, private val onClickListener: OnClickListener):
     RecyclerView.Adapter<MyPlantationAdapter.MyPlantationHolder>() {

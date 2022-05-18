@@ -1,11 +1,7 @@
 package com.example.dedoverde.model
 
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.model.DocumentKey
-import com.google.firebase.firestore.model.ResourcePath
 import com.google.firebase.ktx.Firebase
-import java.lang.ref.Reference
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -25,7 +21,7 @@ object Dataset {
             width = "10".toFloat(),
             height = "25".toFloat(),
             address = "Brasil",
-            plantId = 1,
+            plantId = 2,
             dateCreated = Calendar.getInstance().time
         ),
         PlantationDTO(
@@ -34,7 +30,7 @@ object Dataset {
             width = "2.5".toFloat(),
             height = "15".toFloat(),
             address = "Brasil",
-            plantId = 2,
+            plantId = 4,
             dateCreated = Calendar.getInstance().time
         ),
         PlantationDTO(

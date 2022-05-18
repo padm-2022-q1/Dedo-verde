@@ -59,6 +59,6 @@ class MyPlantationList : Fragment() {
             )
         }
     }
-a
+
     private fun getNavController() = view?.findNavController()
 }

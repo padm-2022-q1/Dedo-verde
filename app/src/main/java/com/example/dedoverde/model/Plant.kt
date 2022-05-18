@@ -6,4 +6,4 @@ data class Plant (
     val minPlantArea: Float,
     val bestSeasonToPlant: SeasonsOfTheYear,
     val daysToHarvest: Int
-) { }
+)
