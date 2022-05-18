@@ -1,7 +1,5 @@
 package com.example.dedoverde.model
 
-import com.google.firebase.firestore.DocumentReference
-import java.lang.ref.Reference
 import java.util.*
 
 data class PlantationDTO (
