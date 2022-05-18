@@ -33,6 +33,9 @@ class NewPlantation : Fragment() {
         super.onStart()
 
         binding.buttonAdd.setOnClickListener {
+
+
+
             getNavController()?.navigate(
                 NewPlantationDirections.actionNewPlantationToPlotResults()
             )

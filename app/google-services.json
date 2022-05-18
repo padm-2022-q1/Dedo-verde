@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "51261363287",
+    "project_id": "dedoverde-3f11f",
+    "storage_bucket": "dedoverde-3f11f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51261363287:android:96a046cd7aa3a47d22ff12",
+        "android_client_info": {
+          "package_name": "com.example.dedoverde"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51261363287-k34m1q9uj5smbpjokn3r4fq7keoi4vt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dedoverde",
+            "certificate_hash": "6319362456e7deeb0bfed5e41cbfa2146fc5887e"
+          }
+        },
+        {
+          "client_id": "51261363287-j0sgd2hp4nda2g3tdfm39c8vat0cdu54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeomIm9LEEVxE1KuNKHmaYHAKL3_0J65U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51261363287-j0sgd2hp4nda2g3tdfm39c8vat0cdu54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

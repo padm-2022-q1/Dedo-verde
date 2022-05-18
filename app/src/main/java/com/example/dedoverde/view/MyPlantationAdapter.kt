@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dedoverde.databinding.MyPlantationListItemBinding
+import com.example.dedoverde.model.Plant
 import com.example.dedoverde.model.Plantation
+import java.util.*
 
 class MyPlantationAdapter(private val plantations: List<Plantation>, private val onClickListener: OnClickListener):
     RecyclerView.Adapter<MyPlantationAdapter.MyPlantationHolder>() {
@@ -27,9 +29,9 @@ class MyPlantationAdapter(private val plantations: List<Plantation>, private val
     override fun onBindViewHolder(holder: MyPlantationHolder, position: Int) {
         val plantation = plantations[position]
 
-        holder.name.text = plantation.name
+        holder.name.text = plantation.title
         holder.date.text = plantation.formattedDateCreated()
-        holder.size.text = plantation.size
+        holder.size.text = plantation.size().toString()
 
         holder.itemView.setOnClickListener {
             onClickListener.onClick(plantation)

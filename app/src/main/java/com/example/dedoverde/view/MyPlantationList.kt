@@ -1,49 +1,22 @@
 package com.example.dedoverde.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.dedoverde.databinding.FragmentMyPlantationListBinding
 import com.example.dedoverde.model.Plantation
-import java.util.*
+import com.example.dedoverde.viewmodel.PlantationViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class MyPlantationList : Fragment() {
     private lateinit var binding: FragmentMyPlantationListBinding
-
-    private val mockPlantationList: List<Plantation> = listOf(
-        Plantation("Plantacao Batata", Date(), "21 canteiros | 23 m²"),
-        Plantation("Cenoura", Date(), "87 canteiros | 3 m²"),
-        Plantation("Abacaxi", Date(), "56 canteiros | 2 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-        Plantation("Alface e hortela", Date(), "35 canteiros | 15 m²"),
-    )
+    private val viewModel: PlantationViewModel by viewModels()
+    private lateinit var plantationList: List<Plantation>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -55,18 +28,29 @@ class MyPlantationList : Fragment() {
         return binding.root
     }
 
-    override fun onStart() {
-        super.onStart()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        binding.recyclerViewNoteList.apply {
-            adapter = MyPlantationAdapter(
-                mockPlantationList,
-                MyPlantationAdapter.OnClickListener { plantation ->
-                    getNavController()?.navigate(
-                        MyPlantationListDirections.actionMyPlantationListToPlantationView()
+        viewModel.getAllPlantation().observe(viewLifecycleOwner) { status ->
+            when (status) {
+                is PlantationViewModel.Status.Failure -> {
+                    Log.e("VIEW", "Failed to fetch metadata list", status.e)
+                    Snackbar.make(
+                        binding.root, "Failed to list items",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
+                is PlantationViewModel.Status.Success -> {
+                    binding.recyclerViewNoteList.adapter = MyPlantationAdapter(
+                        (status.result as PlantationViewModel.Result.PlantationListResult).value,
+                        MyPlantationAdapter.OnClickListener { _ ->
+                            getNavController()?.navigate(
+                                MyPlantationListDirections.actionMyPlantationListToPlantationView()
+                            )
+                        }
                     )
                 }
-            )
+            }
         }
 
         binding.addPlantation.setOnClickListener {
@@ -75,6 +59,6 @@ class MyPlantationList : Fragment() {
             )
         }
     }
-
+a
     private fun getNavController() = view?.findNavController()
 }
