@@ -21,25 +21,23 @@
     <fragment
         android:id="@+id/newPlantation"
         android:name="com.example.dedoverde.view.NewPlantation"
-        android:label="NewPlantation" >
+        android:label="NewPlantation">
+        <argument
+            android:name="plantation_id"
+            app:argType="long"
+            android:defaultValue="0L" />
         <action
-            android:id="@+id/action_newPlantation_to_plotResults"
-            app:destination="@id/newPlotResults"
-            app:popUpTo="@id/newPlantation" />
-    </fragment>
-    <fragment
-        android:id="@+id/newPlotResults"
-        android:name="com.example.dedoverde.view.NewPlotResults"
-        android:label="new_plot_results"
-        tools:layout="@layout/new_plot_results" >
-        <action
-            android:id="@+id/action_newPlotResults_to_myPlantationList"
+            android:id="@+id/action_newPlantation_to_myPlantationList"
             app:destination="@id/myPlantationList" />
     </fragment>
     <fragment
         android:id="@+id/plantationView"
         android:name="com.example.dedoverde.view.PlantationView"
-        android:label="PlantationView" >
+        android:label="PlantationView">
+        <argument
+            android:name="plantation_id"
+            app:argType="long"
+            android:defaultValue="0L" />
         <action
             android:id="@+id/action_plantationView_to_myPlantationList"
             app:destination="@id/myPlantationList" />

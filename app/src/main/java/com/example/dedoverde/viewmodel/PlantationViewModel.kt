@@ -139,4 +139,13 @@ class PlantationViewModel(application: Application) : AndroidViewModel(applicati
             emit(Status.Failure(Exception("Failed to fetch URL for video $plantation.id", e)))
         }
     }
+
+    fun deletePlantationById(plantationId: Long) = liveData {
+        try {
+            repository.deletePlantation(plantationId)
+            emit(Status.Success(null))
+        } catch (e: Exception) {
+            emit(Status.Failure(Exception("Failed to fetch URL for video $plantationId", e)))
+        }
+    }
 }

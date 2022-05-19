@@ -79,7 +79,7 @@ class Repository {
      * @param plantId the plant id
      * @return the plant
      */
-    suspend fun getPlantById(plantId: Long): Plant = getCollection()
+    suspend fun getPlantById(plantId: Long): Plant = getPlantCollection()
         .document(plantId.toString())
         .get()
         .await()
@@ -92,7 +92,12 @@ class Repository {
      * @return void
      */
     suspend fun insertPlantation(plantation: PlantationDTO) {
-        val id = getCollection().get().await().size().toLong() + 1
+        var id: Long = 0
+        getAll().forEach {
+            if(id <= it.id!!)
+                id = it.id + 1
+        }
+
         val p = PlantationDTO(
             id,
             plantation.title,
@@ -117,6 +122,17 @@ class Repository {
                 throw Exception("Failed to update element with non-existing id $plantation.id")
 
             querySnapshot.first().reference.set(plantation)
+        }
+
+    suspend fun deletePlantation(plantationId: Long) = getCollection()
+        .whereEqualTo(PlantationDoc.id, plantationId)
+        .get()
+        .await()
+        .let { querySnapshot ->
+            if (querySnapshot.isEmpty)
+                throw Exception("Failed to delete element with non-existing id $plantationId")
+
+            querySnapshot.first().reference.delete()
         }
 
     private suspend fun isCollectionEmpty() = getCollection()

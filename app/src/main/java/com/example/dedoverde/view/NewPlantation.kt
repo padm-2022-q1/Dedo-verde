@@ -44,7 +44,7 @@ class NewPlantation : Fragment() {
                 binding.textInputEditTextPlantationName.text.toString(),
                 binding.textInputEditTextPlantationWidth.text.toString().toFloat(),
                 binding.textInputEditTextPlantationHeight.text.toString().toFloat(),
-                binding.textInputEditTextPlantationLocation.toString(),
+                binding.textInputEditTextPlantationLocation.text.toString(),
                 plantId,
                 Calendar.getInstance().time
             )
@@ -60,7 +60,7 @@ class NewPlantation : Fragment() {
                     }
                     is PlantationViewModel.Status.Success -> {
                         getNavController()?.navigate(
-                            NewPlantationDirections.actionNewPlantationToPlotResults()
+                            NewPlantationDirections.actionNewPlantationToMyPlantationList()
                         )
                     }
                 }

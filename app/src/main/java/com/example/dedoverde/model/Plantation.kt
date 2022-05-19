@@ -20,4 +20,14 @@ data class Plantation (
         SimpleDateFormat("dd/MM/yy", Locale.US).format(dateCreated)
 
     fun size(): Float = width * height
+
+    fun toPlantationWithPlant(plant: Plant) = PlantationWithPlant(
+        id,
+        title,
+        width,
+        height,
+        address,
+        plant,
+        dateCreated
+    )
 }

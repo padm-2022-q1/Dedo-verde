@@ -43,9 +43,9 @@ class MyPlantationList : Fragment() {
                 is PlantationViewModel.Status.Success -> {
                     binding.recyclerViewNoteList.adapter = MyPlantationAdapter(
                         (status.result as PlantationViewModel.Result.PlantationListResult).value,
-                        MyPlantationAdapter.OnClickListener { _ ->
+                        MyPlantationAdapter.OnClickListener { plantation ->
                             getNavController()?.navigate(
-                                MyPlantationListDirections.actionMyPlantationListToPlantationView()
+                                MyPlantationListDirections.actionMyPlantationListToPlantationView(plantation.id)
                             )
                         }
                     )

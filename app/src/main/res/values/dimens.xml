@@ -6,7 +6,7 @@
     <dimen name="new_plot_results_value_text_size">16sp</dimen>
     <dimen name="component_spacing">32dp</dimen>
     <dimen name="espaco_acima_label">16dp</dimen>
-    <dimen name="tamanho_fonte_label">11sp</dimen>
+    <dimen name="tamanho_fonte_label">15sp</dimen>
     <dimen name="tamanho_fonte_padrao">18sp</dimen>
     <dimen name="padding_horizontal_padrao">16dp</dimen>
     <dimen name="espaco_abaixo_padrao">8dp</dimen>

@@ -1,214 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/forest_green"
-        android:nestedScrollingEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_voltar_foreground"
-        app:navigationIconTint="@color/white"
-        app:title="@string/visualizar_plantacao_titulo_padrao"
-        app:titleCentered="true"
-        app:titleTextColor="@color/white" />
+        android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/button_edit"
-        android:layout_width="65dp"
-        android:layout_height="53dp"
-        android:background="@android:color/transparent"
-        android:drawableEnd="@drawable/ic_baseline_edit_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/forest_green"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIconTint="@color/white"
+            app:title="@string/visualizar_plantacao_titulo_padrao"
+            app:titleCentered="true"
+            app:titleTextColor="@color/white" />
 
-    <TextView
-        android:id="@+id/numero_maximo_canteiros_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_extremos_tela"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_max_plant_amount_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
+<!--        <Button-->
+<!--            android:id="@+id/button_edit"-->
+<!--            android:layout_width="65dp"-->
+<!--            android:layout_height="53dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:drawableEnd="@drawable/ic_baseline_edit_24"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/materialToolbar"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/numero_maximo_canteiros_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/numero_padrao_2"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_canteiros_label" />
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="112dp"
+            android:layout_height="54dp"
+            android:background="@android:color/transparent"
+            android:text="REMOVER"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/espaco_minimo_canteiros_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_min_plant_distance_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_canteiros_value" />
+        <TextView
+            android:id="@+id/plantation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/espaco_extremos_tela"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialToolbar" />
 
-    <TextView
-        android:id="@+id/espaco_minimo_canteiros_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/medida_cm_padrao"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/espaco_minimo_canteiros_label" />
+        <TextView
+            android:id="@+id/plant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingBottom="@dimen/espaco_abaixo_padrao"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plantation_title" />
 
-    <TextView
-        android:id="@+id/numero_maximo_linhas_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_max_rows_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/espaco_minimo_canteiros_value" />
+        <TextView
+            android:id="@+id/best_season_to_plant_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:text="Melhor época para Plantar"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plant_name" />
 
-    <TextView
-        android:id="@+id/numero_maximo_linhas_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        android:text="@string/numero_padrao_1"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_linhas_label" />
+        <TextView
+            android:id="@+id/best_season_to_plant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/best_season_to_plant_field" />
 
-    <TextView
-        android:id="@+id/numero_maximo_colunas_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_max_cols_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_linhas_value" />
+        <TextView
+            android:id="@+id/estimated_harvest_time_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Data estimada de colheita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/best_season_to_plant" />
 
-    <TextView
-        android:id="@+id/numero_maximo_colunas_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        android:text="@string/numero_padrao_1"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_colunas_label" />
+        <TextView
+            android:id="@+id/estimated_harvest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/estimated_harvest_time_field" />
 
-    <TextView
-        android:id="@+id/tempo_estimado_colheita_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_estimated_harvest_time_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numero_maximo_colunas_value" />
+        <TextView
+            android:id="@+id/area_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Área da Plantação (m²)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/estimated_harvest_time" />
 
-    <TextView
-        android:id="@+id/tempo_estimado_colheita_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        android:text="@string/tempo_semanas"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tempo_estimado_colheita_label" />
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/area_field" />
 
-    <TextView
-        android:id="@+id/localizacao_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/localizacao"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tempo_estimado_colheita_value" />
+        <TextView
+            android:id="@+id/min_plant_area_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Área minima para uma planta (m²)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/area" />
 
-    <TextView
-        android:id="@+id/localizacao_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        android:text="@string/endereco_padrao"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/localizacao_label" />
+        <TextView
+            android:id="@+id/min_plant_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/min_plant_area_field" />
 
-    <TextView
-        android:id="@+id/data_criacao_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/espaco_acima_label"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:text="@string/new_plot_results_creation_date_title"
-        android:textAllCaps="true"
-        android:textSize="@dimen/tamanho_fonte_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/localizacao_value" />
+        <TextView
+            android:id="@+id/max_plant_amount_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Máximo de plantas no terreno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/min_plant_area" />
 
-    <TextView
-        android:id="@+id/data_criacao_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_horizontal_padrao"
-        android:paddingBottom="@dimen/espaco_abaixo_padrao"
-        android:text="@string/data_padrao"
-        android:textSize="@dimen/tamanho_fonte_padrao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/data_criacao_label" />
+        <TextView
+            android:id="@+id/max_plant_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_amount_field" />
 
-    <Button
-        android:id="@+id/delete_plantation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/remover"
-        android:backgroundTint="@color/design_default_color_on_primary"
-        android:textColor="@color/red"
-        android:layout_marginBottom="@dimen/espaco_extremos_tela"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/max_plant_for_row_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Número de linhas de plantas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_amount" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/max_plant_for_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_for_row_field" />
+
+        <TextView
+            android:id="@+id/max_plant_for_column_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Número de colunas de plantas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_for_row" />
+
+        <TextView
+            android:id="@+id/max_plant_for_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_for_column_field" />
+
+        <TextView
+            android:id="@+id/width_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Largura do terreno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/max_plant_for_column" />
+
+        <TextView
+            android:id="@+id/width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/width_field" />
+
+        <TextView
+            android:id="@+id/heigth_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Altura do terreno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/width" />
+
+        <TextView
+            android:id="@+id/heigth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heigth_field" />
+
+        <TextView
+            android:id="@+id/address_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Endereço"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heigth" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_field" />
+
+        <TextView
+            android:id="@+id/date_created_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tamanho_fonte_padrao"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:paddingTop="@dimen/espaco_acima_label"
+            android:text="Data de criação"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <TextView
+            android:id="@+id/date_created"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="@dimen/padding_horizontal_padrao"
+            android:textAllCaps="true"
+            android:textSize="@dimen/tamanho_fonte_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_created_field" />
+
+<!--        <Button-->
+<!--            android:id="@+id/delete_plantation"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/remover"-->
+<!--            android:backgroundTint="@color/design_default_color_on_primary"-->
+<!--            android:textColor="@color/red"-->
+<!--            android:layout_marginBottom="@dimen/espaco_extremos_tela"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -31,5 +31,5 @@ data class PlantationWithPlant(
         return calendar.time
     }
 
-    fun size(): Float = width * height
+    fun area(): Float = width * height
 }
